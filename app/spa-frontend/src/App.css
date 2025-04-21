@@ -1,0 +1,49 @@
+/* App.css */
+
+/* Global Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;  
+  border: none;
+  border-radius: 5000px; 
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  min-width: 150px; 
+}
+
+.btn-primary {
+  background: #0052ff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #003db2;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #0052ff;
+  border: 2px solid #0052ff;
+}
+
+.btn-outline:hover {
+  background: #0052ff;
+  color: #fff;
+}

@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Bank Just Got an Upgrade</h1>
+            <h2>Seamless Digital Banking & Fraud Protection</h2>
+            <p>Manage your finances securely and easily with real-time transaction alerts, automated savings, and advanced fraud detection.</p>
+            <div class="hero-buttons">
+                <a href="/login" class="btn btn-primary">Login</a>
+                <a href="/signup" class="btn btn-outline">Sign Up</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <h2>Our Partners</h2>
+        <div class="partners-scroll">
+            {% for i in range(6) %}  {# Duplicate logos for infinite scrolling #}
+                {% for logo in [
+                    "https://array.com/_app/immutable/assets/array-logo-74cfaf49.svg",
+                    "https://array.com/_app/immutable/assets/array-logo-74cfaf49.svg",
+                    "https://array.com/_app/immutable/assets/array-logo-74cfaf49.svg",
+                    "https://array.com/_app/immutable/assets/array-logo-74cfaf49.svg"
+                ] %}
+                    <div class="partner-item">
+                        <img src="{{ logo }}" alt="Partner Logo">
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </section>
+    
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <div class="trust-card">
+                <h2>Secure Banking & Build Trust</h2>
+                <p>Our advanced banking solutions ensure secure transactions, fraud prevention,
+                    and seamless financial management. With cutting-edge encryption and AI-powered
+                    security, we protect your personal and financial data while providing a seamless
+                    banking experience. Whether you're making payments, managing investments, or
+                    applying for loans, your trust is our priority.</p>
+            </div>
+            <div class="trust-card">
+                <h2>Seamless Digital Banking</h2>
+                <p>We leverage advanced financial technology to enhance security, streamline transactions,
+                    and provide a seamless banking experience. Our platform ensures secure digital identity
+                    verification, real-time fraud protection, and easy access to financial services.
+                    Whether you're managing personal accounts or business finances, our innovative banking
+                    solutions are designed to keep your money safe and accessible.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-content">
+            <h2>Revolutionizing Digital Banking</h2>
+            <p>
+                Experience the future of banking with Bank of Henrique, where security, convenience, and innovation come together.
+                Our platform offers seamless transactions, AI-driven fraud protection, and real-time financial management
+                to keep your money secure and accessible anytime, anywhere.
+            </p>
+    
+            <!-- Features Grid -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🔒 Bank-Grade Security</h3>
+                    <p>Our end-to-end encryption and AI-driven fraud detection keep your funds and personal information safe.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💳 Instant Transfers</h3>
+                    <p>Send and receive money instantly with real-time transaction processing and zero hidden fees.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📈 Smart Financial Insights</h3>
+                    <p>AI-powered analytics help you track spending, optimize savings, and achieve your financial goals faster.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Why Choose Us Section -->
+        <div class="why-choose-us">
+            <h2>Why Choose Us?</h2>
+    
+            <!-- Card 1: Advanced Security -->
+            <div class="choose-card">
+                <img src="https://cdn.prod.website-files.com/637b540a6d55b65cfebb935c/637b540a6d55b6f1cfbb9398_Group%20550.svg" alt="Advanced Security">
+                <div class="choose-content">
+                    <h3>Advanced Security</h3>
+                    <p>
+                        Uncompromising Security for Your Financial Peace of Mind
+
+                            At Bank of Henrique, we don't just secure your money; we secure your trust. Our advanced security measures are designed to provide you with the ultimate peace of mind in today's digital world.
+
+                            Ironclad Encryption: Your data is protected by the strongest encryption standards, ensuring complete confidentiality.
+                            Advanced Authentication: Multi-factor and biometric authentication options provide unparalleled security against unauthorized access.
+                            Intelligent Fraud Protection: Our AI-powered systems detect and prevent fraud in real time, safeguarding your assets.
+                            Your security is our unwavering commitment. Bank with confidence.
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Card 2: Seamless Experience -->
+            <div class="choose-card">
+                <img src="https://cdn.prod.website-files.com/637b540a6d55b65cfebb935c/637b540a6d55b6c4e5bb9394_Group%20547.svg" alt="Seamless Experience">
+                <div class="choose-content">
+                    <h3>Seamless User Experience</h3>
+                    <p>
+                        At Bank of Henrique, we redefine digital banking with an intuitive, user-friendly interface designed for effortless navigation.
+                            Whether you're managing everyday transactions, setting up automatic bill payments, or tracking your financial growth, our platform ensures a smooth, hassle-free experience for users of all backgrounds.
+
+                            Effortless Navigation: Our app features a clean, clutter-free design with easy-to-access menus and real-time updates making financial management more convenient than ever.
+                            One-Tap Transfers: Instantly send or receive money with zero delays—whether you're splitting a bill, paying rent, or handling business transactions.
+                            Personalized Dashboards: Get a comprehensive financial overview with AI-powered analytics, helping you track expenses, savings, and investments at a glance.
+                            Smart Alerts & Notifications: Stay informed with real-time balance updates, security alerts, and transaction reminders to keep your finances on track.
+                            24/7 Customer Support: Need help? Our dedicated support team is available round the clock, ensuring you receive the best assistance whenever needed.
+
+                            With Bank of Henrique banking isn't just a necessity—it's a seamless experience designed to put control, security, and convenience at your fingertips.
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Card 3: Trusted by Thousands -->
+            <div class="choose-card">
+                <img src="https://cdn.prod.website-files.com/637b540a6d55b65cfebb935c/6659a6595d5b979e9a752272_map-illustration.webp" alt="Trusted by Thousands">
+                <div class="choose-content">
+                    <h3>Trusted by Thousands</h3>
+                    <p>
+                        At Bank of Henrique, we take pride in serving a growing community of individuals and businesses who rely on our secure and efficient banking solutions every day.
+                            Whether you're a freelancer managing payments, a business owner handling payroll, or an individual tracking expenses, our platform ensures a safe, seamless, and highly reliable financial experience.
+
+                            Widespread Adoption: With thousands of active users, our banking system is built to support both personal and business transactions with speed, accuracy, and security at its core.
+                            Unmatched Security: Our users trust us because we implement bank-grade encryption, multi-factor authentication (MFA), and AI-driven fraud detection to keep their funds and data safe.
+                            Business-Ready: From automated payroll solutions to instant invoicing and vendor payments, businesses of all sizes depend on our platform to streamline financial operations.
+                            Financial Insights & Budgeting Tools: Our AI-powered analytics provide real-time insights, allowing users to make smarter financial decisions based on detailed expense tracking, savings goals, and customized reports.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Call to Action (Sign Up) -->
+        <div class="trust-card trust-card--info">
+            <p>With Bank of Henrique, you get $1000 on sign-up <strong>safely accessible in one place.</strong></p>
+            <a href="/signup" class="btn btn-primary">Sign up Now!</a>
+        </div>
+    </section>
+{% endblock %}

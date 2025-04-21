@@ -1,0 +1,15 @@
+fastapi
+sqlalchemy
+bcrypt
+PyJWT
+psycopg2
+python-multipart
+uvicorn
+pytest
+httpx
+pyotp
+slowapi
+jinja2
+prometheus-client
+loguru
+starlette

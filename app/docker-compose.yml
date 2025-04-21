@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000" 
+    environment:
+      DATABASE_URL: postgresql://bank_user:securepassword@db/banking_app
+    depends_on:
+      - db
+    entrypoint: ["/app/entrypoint.sh"]
+    volumes:
+      - .:/app
+
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: bank_user
+      POSTGRES_PASSWORD: securepassword
+      POSTGRES_DB: banking_app
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    depends_on:
+      - app
+
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana-provisioning:/etc/grafana/provisioning
+
+
+  spa:
+    build:
+      context: ./spa-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+    - PORT=5173
+    command: sh -c "./entrypoint.sh"
+    volumes:
+      - ./spa-frontend:/app
+    working_dir: /app
+    depends_on:
+      - app
+
+volumes:
+  postgres_data:
+  grafana_data:
