@@ -1,0 +1,33 @@
+.partners {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .partners-scroll {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  
+  .partners-scroll::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
+  }
+  
+  .partner-item {
+    flex: 0 0 auto;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .partner-item img {
+    max-height: 40px;
+    object-fit: contain;
+  }
+  
